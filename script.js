@@ -21,7 +21,7 @@ toggleBtn.addEventListener("click", () => {
 const qrContainer = document.getElementById("qrCode");
 
 // CHANGE this after deployment
-const websiteURL = "https://your-username.github.io/virtual-business-card/";
+const websiteURL = "https:https://mushtak7.github.io/virtual-business-card/";
 
 const qrImage = document.createElement("img");
 qrImage.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${websiteURL}`;
@@ -43,3 +43,4 @@ function typeText() {
 }
 
 typeText();
+
