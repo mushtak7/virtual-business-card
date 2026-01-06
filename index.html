@@ -9,13 +9,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    >
 
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <main class="card">
+
         <!-- Profile Section -->
         <div class="profile-section">
             <img src="assets/profile.png" alt="Profile Photo">
@@ -26,36 +31,37 @@
             <h1>Mushtak Attar</h1>
             <h3>Full Stack Developer</h3>
 
-            <!-- Animated Bio -->
+            <!-- Typing Bio -->
             <p class="bio">
                 <span id="typingText"></span>
             </p>
 
-            <!-- Contact -->
+            <!-- Contact Info -->
             <div class="contact">
-                <p><i class="fa-solid fa-envelope"></i> Mushtak000007@gmail.com</p>
-                <p><i class="fa-solid fa-phone"></i> +91 8421098186</p>
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    Mushtak000007@gmail.com
+                </p>
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    +91 8421098186
+                </p>
             </div>
 
             <!-- Social Links -->
-<div class="social-links">
-    <a href="https://github.com/mushtak7" target="_blank" title="GitHub">
-        <i class="fa-brands fa-github"></i>
-    </a>
+            <div class="social-links">
+                <a href="https://github.com/mushtak7" target="_blank" title="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
 
-    <a href="#" title="LinkedIn">
-        <i class="fa-brands fa-linkedin"></i>
-    </a>
+                <a href="https://www.instagram.com/" target="_blank" title="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
 
-    <a href="https://www.instagram.com/mushtak__07?igsh=MWtkMjAydmZhMWZ4eg==" target="_blank" title="Instagram">
-        <i class="fa-brands fa-instagram"></i>
-    </a>
-</div>
-
-
-            <!-- Actions -->
+            <!-- Action Buttons -->
             <div class="actions">
-                <button id="darkModeToggle" title="Dark Mode">
+                <button id="darkModeToggle" title="Toggle Dark Mode">
                     <i class="fa-solid fa-moon"></i>
                 </button>
 
@@ -67,8 +73,14 @@
             <!-- QR Code -->
             <div id="qrCode"></div>
         </div>
+
     </main>
 
+    <!-- QR Code Library (MUST COME FIRST) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <!-- Custom JS -->
     <script src="script.js"></script>
+
 </body>
 </html>
