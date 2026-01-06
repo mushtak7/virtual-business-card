@@ -18,7 +18,17 @@ toggleBtn.addEventListener("click", () => {
 });
 
 // QR Code
+// QR Code
 const qrContainer = document.getElementById("qrCode");
+
+const websiteURL = "https:https://mushtak7.github.io/virtual-business-card/";
+
+const qrImage = document.createElement("img");
+qrImage.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${websiteURL}`;
+qrImage.alt = "QR Code";
+
+qrContainer.appendChild(qrImage);
+
 
 // CHANGE this after deployment
 const websiteURL = "https:https://mushtak7.github.io/virtual-business-card/";
@@ -43,4 +53,5 @@ function typeText() {
 }
 
 typeText();
+
 
