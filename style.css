@@ -1,6 +1,4 @@
-/* =========================
-   Reset
-========================= */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -8,82 +6,57 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* =========================
-   Theme Variables
-========================= */
+/* Theme */
 :root {
-    --bg-color: #eef1f6;
-    --card-bg: rgba(255, 255, 255, 0.75);
-    --text-color: #1f2937;
-    --secondary-text: #6b7280;
+    --bg: #eef1f6;
+    --card: rgba(255,255,255,0.85);
+    --text: #1f2937;
+    --muted: #6b7280;
     --accent: #6366f1;
 }
 
 body.dark {
-    --bg-color: #020617;
-    --card-bg: rgba(15, 23, 42, 0.9);
-    --text-color: #f8fafc;
-    --secondary-text: #c7d2fe;
+    --bg: #020617;
+    --card: rgba(15,23,42,0.92);
+    --text: #f8fafc;
+    --muted: #c7d2fe;
 }
 
-/* =========================
-   Body – TRUE FULLSCREEN
-========================= */
+/* Body fullscreen */
 body {
     min-height: 100svh;
-    width: 100%;
-    background: radial-gradient(circle at top, #c7d2fe, var(--bg-color));
+    background: radial-gradient(circle at top, #c7d2fe, var(--bg));
     display: flex;
     justify-content: center;
     align-items: stretch;
 }
 
-/* =========================
-   Card – FULL SCREEN
-========================= */
+/* Card */
 .card {
     width: 100%;
     min-height: 100svh;
-    background: var(--card-bg);
-    backdrop-filter: blur(16px);
+    background: var(--card);
     overflow-y: auto;
-    animation: fadeIn 0.6s ease;
 }
 
-/* Desktop look */
+/* Desktop */
 @media (min-width: 768px) {
     body {
         align-items: center;
     }
 
     .card {
-        max-width: 420px;
+        max-width: 440px;
         min-height: 92vh;
-        border-radius: 24px;
-        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+        border-radius: 26px;
+        box-shadow: 0 30px 80px rgba(0,0,0,0.25);
     }
 }
 
-/* =========================
-   Animations
-========================= */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(25px) scale(0.96);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
-
-/* =========================
-   Profile Section
-========================= */
+/* Profile */
 .profile-section {
     background: linear-gradient(135deg, #6366f1, #8b5cf6);
-    padding: 56px 20px;
+    padding: 72px 20px;
     text-align: center;
     position: relative;
 }
@@ -91,138 +64,93 @@ body {
 .profile-section::after {
     content: "";
     position: absolute;
-    bottom: -36px;
+    bottom: -40px;
     left: 0;
     width: 100%;
-    height: 72px;
-    background: var(--card-bg);
+    height: 80px;
+    background: var(--card);
     border-radius: 50%;
 }
 
-/* Profile Image */
 .profile-section img {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    border: 4px solid #ffffff;
+    border: 5px solid #fff;
     object-fit: cover;
-    animation: float 4s ease-in-out infinite;
 }
 
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
-}
-
-/* =========================
-   Info Section
-========================= */
+/* Info */
 .info-section {
-    padding: 50px 22px 32px;
+    padding: 64px 24px 40px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
 }
 
 .info-section h1 {
-    font-size: 22px;
-    color: var(--text-color);
+    font-size: 26px;
+    color: var(--text);
 }
 
 .info-section h3 {
-    font-size: 14px;
+    font-size: 16px;
     color: var(--accent);
-    margin-top: 6px;
     font-weight: 500;
 }
 
-/* Bio */
 .bio {
-    font-size: 13px;
-    color: var(--secondary-text);
-    margin: 18px 0;
-    min-height: 38px;
-    line-height: 1.6;
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--muted);
 }
 
-/* =========================
-   Contact
-========================= */
+/* Contact */
 .contact p {
-    font-size: 13px;
-    margin: 8px 0;
-    color: var(--text-color);
+    font-size: 15px;
+    color: var(--text);
 }
 
 .contact i {
+    color: var(--accent);
     margin-right: 8px;
-    color: var(--accent);
 }
 
-/* =========================
-   Social Links
-========================= */
-.social-links {
-    margin: 22px 0;
-}
-
+/* Social */
 .social-links a {
-    margin: 0 12px;
-    font-size: 18px;
-    color: var(--text-color);
-    transition: transform 0.25s ease, color 0.25s ease;
+    font-size: 22px;
+    margin: 0 16px;
+    color: var(--text);
 }
 
-.social-links a:hover {
-    color: var(--accent);
-    transform: translateY(-6px) scale(1.15);
-}
-
-/* =========================
-   Actions
-========================= */
+/* Actions */
 .actions {
     display: flex;
     justify-content: center;
-    gap: 14px;
-    margin-top: 16px;
+    gap: 18px;
 }
 
-/* Dark Mode Button */
 #darkModeToggle {
-    background: linear-gradient(135deg, #6366f1, #8b5cf6);
-    color: #ffffff;
+    padding: 14px 16px;
+    border-radius: 14px;
     border: none;
-    padding: 10px 14px;
-    border-radius: 12px;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: #fff;
     cursor: pointer;
 }
 
-/* vCard Button */
 .vcard-btn {
-    font-size: 13px;
-    text-decoration: none;
-    padding: 10px 16px;
-    border-radius: 12px;
+    padding: 14px 22px;
+    border-radius: 14px;
     border: 1px solid var(--accent);
     color: var(--accent);
+    text-decoration: none;
 }
 
-.vcard-btn:hover {
-    background: var(--accent);
-    color: #ffffff;
-}
-
-/* =========================
-   QR Code
-========================= */
+/* QR */
 #qrCode {
-    margin-top: 26px;
+    margin-top: 10px;
     display: flex;
     justify-content: center;
-}
-
-/* =========================
-   Smooth Mobile Scroll
-========================= */
-.card::-webkit-scrollbar {
-    width: 0;
 }
