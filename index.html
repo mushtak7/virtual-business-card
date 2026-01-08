@@ -1,86 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mushtak Attar | Virtual Business Card</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mushtak Attar – Digital Business Card</title>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome -->
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    >
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <main class="card">
+<div class="page">
 
-        <!-- Profile Section -->
-        <div class="profile-section">
-            <img src="assets/profile.png" alt="Profile Photo">
-        </div>
+  <div class="card">
 
-        <!-- Info Section -->
-        <div class="info-section">
-            <h1>Mushtak Attar</h1>
-            <h3>Full Stack Developer</h3>
+    <!-- Profile -->
+    <div class="profile">
+      <img src="profile.png" alt="Profile Photo">
+    </div>
 
-            <!-- Typing Bio -->
-            <p class="bio">
-                <span id="typingText"></span>
-            </p>
+    <!-- Info -->
+    <h1>Mushtak Attar</h1>
+    <p class="role">Full Stack Developer</p>
 
-            <!-- Contact Info -->
-            <div class="contact">
-                <p>
-                    <i class="fa-solid fa-envelope"></i>
-                    Mushtak000007@gmail.com
-                </p>
-                <p>
-                    <i class="fa-solid fa-phone"></i>
-                    +91 8421098186
-                </p>
-            </div>
+    <!-- Animated Tagline -->
+    <p class="tagline">
+      <span id="typing"></span>
+    </p>
 
-            <!-- Social Links -->
-            <div class="social-links">
-                <a href="https://github.com/mushtak7" target="_blank" title="GitHub">
-                    <i class="fa-brands fa-github"></i>
-                </a>
+    <!-- Social Links -->
+    <div class="socials">
+      <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
 
-                <a href="https://www.instagram.com/" target="_blank" title="Instagram">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-            </div>
+    <!-- Actions -->
+    <div class="actions">
+      <a href="Mushtak.vcf" download class="btn primary">
+        <i class="fa-solid fa-address-card"></i> Save Contact
+      </a>
 
-            <!-- Action Buttons -->
-            <div class="actions">
-                <button id="darkModeToggle" title="Toggle Dark Mode">
-                    <i class="fa-solid fa-moon"></i>
-                </button>
+      <button id="themeToggle" class="btn secondary">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+    </div>
 
-                <a href="assets/mushtak-attar.vcf" download class="vcard-btn">
-                    Download vCard
-                </a>
-            </div>
+    <!-- QR Section -->
+    <div class="qr-section">
+      <p>Scan to save contact</p>
+      <div id="qrCode"></div>
+    </div>
 
-            <!-- QR Code -->
-            <div id="qrCode"></div>
-        </div>
+  </div>
 
-    </main>
+</div>
 
-    <!-- QR Code Library (MUST COME FIRST) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-
-    <!-- Custom JS -->
-    <script src="script.js"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
